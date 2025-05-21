@@ -1,0 +1,333 @@
+/* =========================
+   RESET E CONFIGURAÇÕES GLOBAIS
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+header {
+  background: linear-gradient(135deg, #4a90e2, #2c3e50);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.destaque {
+  color: #ffc107;
+}
+
+/* =========================
+   NAVEGAÇÃO
+   ========================= */
+nav {
+  background-color: #222;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffc107;
+  transform: scale(1.05);
+  text-shadow: 0 0 5px #ffc107;
+}
+
+/* =========================
+   SEÇÕES PRINCIPAIS
+   ========================= */
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* FOTO DE PERFIL */
+.foto-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.foto-perfil {
+  width: 240px;
+  height: 270px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* HABILIDADES */
+.habilidade {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #4a90e2;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.habilidade:hover {
+  box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+}
+
+.habilidade h3 {
+  color: #4a90e2;
+  margin-bottom: 10px;
+}
+
+.logo-tecnologia {
+  width: 50px;
+  height: 50px;
+}
+
+/* PROJETOS E DEPOIMENTOS */
+.projeto,
+.depoimento {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #4a90e2;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.projeto:hover,
+.depoimento:hover {
+  box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+}
+
+/* =========================
+   BOTÕES
+   ========================= */
+.botao-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#botao-contato {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#botao-contato:hover {
+  background-color: #2c3e50;
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(44, 62, 80, 0.4);
+}
+
+/* BOTÃO WHATSAPP FLUTUANTE */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 24px;
+  animation: pulse 2s infinite;
+  text-decoration: none;
+  z-index: 1000;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebe57;
+  transform: scale(1.15);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.6);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* =========================
+   REDES SOCIAIS
+   ========================= */
+.social-media {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.social-media a {
+  color: #4a90e2;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #ffc107;
+  transform: scale(1.1);
+  text-shadow: 0 0 5px #ffc107;
+}
+
+/* =========================
+   RODAPÉ
+   ========================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+  color: white;
+}
+
+/* =========================
+   ANIMAÇÕES
+   ========================= */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* =========================
+   RESPONSIVO
+   ========================= */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .foto-perfil {
+    width: 100px;
+    height: 100px;
+  }
+
+  section {
+    padding: 40px 15px;
+  }
+
+  #botao-contato {
+    width: 100%;
+  }
+
+  .habilidade {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo-tecnologia {
+    margin-bottom: 10px;
+  }
+}
+
+/* =========================
+   DARK MODE
+   ========================= */
+.dark-mode {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+.dark-mode header {
+  background: linear-gradient(135deg, #333, #111);
+}
+
+.dark-mode nav {
+  background-color: #111;
+}
+
+.dark-mode .habilidade,
+.dark-mode .projeto,
+.dark-mode .depoimento {
+  background-color: #2a2a2a;
+  color: #f1f1f1;
+  border-left-color: #ffc107;
+}
+
+.dark-mode #botao-contato {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.dark-mode .social-media a:hover {
+  color: #fff;
+  text-shadow: none;
+  transform: none;
+}
+
+.toggle-theme {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  background-color: #111;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 12px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  z-index: 999;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.toggle-theme:hover {
+  background-color: #333;
+  transform: scale(1.1);
+}
+
+.dark-mode .toggle-theme {
+  background-color: #f4f4f4;
+  color: #111;
+}
+
